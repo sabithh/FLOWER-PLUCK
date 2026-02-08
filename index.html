@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flower Pluck Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="app">
+    <canvas id="gameCanvas"></canvas>
+    <div id="ui-layer">
+      <div id="start-screen" class="screen">
+        <div class="logo-container logo-spread">
+          <img src="/assets/adtec.png" alt="ADTEC Logo" class="brand-logo logo-left">
+          <img src="/assets/mestech.png" alt="MESTECH Logo" class="brand-logo logo-center">
+          <img src="/assets/mes.png" alt="MES Logo" class="brand-logo logo-right">
+        </div>
+        <h1>Flower Pluck</h1>
+        <p>Use Joystick/Mouse to Pluck Petals</p>
+        <p class="instruction">Drag cursor over a petal and pull away!</p>
+        <button id="start-btn">Start Game</button>
+      </div>
+      <div id="game-over-screen" class="screen hidden">
+        <div class="logo-container logo-spread">
+          <img src="/assets/adtec.png" alt="ADTEC Logo" class="brand-logo logo-left">
+          <img src="/assets/mestech.png" alt="MESTECH Logo" class="brand-logo logo-center">
+          <img src="/assets/mes.png" alt="MES Logo" class="brand-logo logo-right">
+        </div>
+        <h1 id="game-over-title">Game Over</h1>
+        <button id="restart-btn">Try Again</button>
+      </div>
+      <div id="hud" class="hidden">
+        <div id="score">Petals: <span id="petal-count">0</span></div>
+        <div class="logo-container gameplay-logos logo-corners">
+          <img src="/assets/adtec.png" alt="ADTEC Logo" class="brand-logo-small logo-left">
+          <img src="/assets/mes.png" alt="MES Logo" class="brand-logo-small logo-right">
+        </div>
+        <div class="logo-center-bottom">
+          <img src="/assets/mestech.png" alt="MESTECH Logo" class="brand-logo-small">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
