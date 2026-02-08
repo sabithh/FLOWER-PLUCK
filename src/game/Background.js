@@ -99,12 +99,16 @@ export default class Background {
 
     draw(ctx) {
         // Deep space/futuristic gradient
-        const gradient = ctx.createLinearGradient(0, 0, 0, this.height);
-        gradient.addColorStop(0, '#050314');
-        gradient.addColorStop(0.5, '#18122B');
-        gradient.addColorStop(1, '#0f0c29');
-        ctx.fillStyle = gradient;
-        ctx.fillRect(0, 0, this.width, this.height);
+        // Clear canvas for transparency (allows CSS background to show)
+        ctx.clearRect(0, 0, this.width, this.height);
+
+        // Deep space/futuristic gradient - REMOVED to show MESTECH background
+        // const gradient = ctx.createLinearGradient(0, 0, 0, this.height);
+        // gradient.addColorStop(0, '#050314');
+        // gradient.addColorStop(0.5, '#18122B');
+        // gradient.addColorStop(1, '#0f0c29');
+        // ctx.fillStyle = gradient;
+        // ctx.fillRect(0, 0, this.width, this.height);
 
         // Draw Nebulas (Subtle Glows)
         ctx.globalCompositeOperation = 'screen';

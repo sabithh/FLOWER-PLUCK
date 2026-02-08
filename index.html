@@ -19,9 +19,15 @@
           <img src="/assets/mestech.png" alt="MESTECH Logo" class="brand-logo logo-center">
           <img src="/assets/mes.png" alt="MES Logo" class="brand-logo logo-right">
         </div>
-        <h1>Flower Pluck</h1>
+        <h1>Flower Plucker</h1>
         <p>Use Joystick/Mouse to Pluck Petals</p>
         <p class="instruction">Drag cursor over a petal and pull away!</p>
+
+        <div class="sensitivity-control">
+          <label for="sensitivity-slider">Joystick Sensitivity: <span id="sensitivity-value">15</span></label>
+          <input type="range" id="sensitivity-slider" min="5" max="30" value="15">
+        </div>
+
         <button id="start-btn">Start Game</button>
       </div>
       <div id="game-over-screen" class="screen hidden">

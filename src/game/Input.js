@@ -3,6 +3,7 @@ export default class Input {
         this.game = game;
         this.cursor = { x: game.width / 2, y: game.height / 2 };
         this.isMouseDown = false;
+        this.sensitivity = 15; // Default sensitivity
 
         // Mouse Listeners
         window.addEventListener('mousemove', (e) => {
@@ -28,7 +29,7 @@ export default class Input {
             if (Math.abs(dy) < deadzone) dy = 0;
 
             // Move cursor based on joystick
-            const speed = 15;
+            const speed = this.sensitivity;
             this.cursor.x += dx * speed;
             this.cursor.y += dy * speed;
 
