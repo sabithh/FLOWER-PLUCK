@@ -1,4 +1,4 @@
-import './style.css'
+// import './style.css'
 import Game from './src/game/Game.js'
 
 const canvas = document.getElementById('gameCanvas');
@@ -38,6 +38,7 @@ try {
     if (restartBtn) {
         restartBtn.addEventListener('click', () => {
             gameOverScreen.classList.add('hidden');
+            hud.classList.remove('hidden');
             game.restart();
         });
     }
@@ -51,6 +52,9 @@ try {
         }
         if (gameOverScreen) {
             gameOverScreen.classList.remove('hidden');
+        }
+        if (hud) {
+            hud.classList.add('hidden');
         }
     };
 

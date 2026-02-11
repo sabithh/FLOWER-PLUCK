@@ -77,7 +77,7 @@ export default class Game {
         this.background.draw(this.ctx);
 
         // Draw Zones (Debug or Subtle)
-        // this.zones.draw(this.ctx); // Hidden as requested, but logic exists
+        this.zones.draw(this.ctx);
 
         // Draw Flower
         this.flower.draw(this.ctx);
